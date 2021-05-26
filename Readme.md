@@ -2,7 +2,9 @@
   <img src="img/alurachallenge.png" />
 </p>
 
-<p style="text-align: center; font-size: 30px; font-weight: bold">Desafio Front-End</p>
+<h2 align="center">Desafio Front-End</h2>
+
+###
 
 Um projeto em forma de desafio proposto pela [alura](https://www.alura.com.br/), para ajudar a desenvolver habilidades, participar em um projeto que simula o ambiente de trabalho e criar um portfólio.
 
