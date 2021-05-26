@@ -160,6 +160,7 @@ ul.nav__menu li:last-child{
 
     .nav__menu {
         width   : auto;
+        height: auto;
         position: inherit;
 
         transition: none;
