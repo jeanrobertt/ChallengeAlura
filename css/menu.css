@@ -1,0 +1,197 @@
+.menu_nome {
+    display: none;
+}
+
+.nav__menu {
+    display : block;
+    position: absolute;
+    gap     : .5rem;
+
+    top   : 4.375rem;
+    right : 0;
+    width : 0;
+    height: 100vh;
+
+    background   : #2D415B;
+    border-radius: .5rem;
+    list-style   : none;
+
+    transition: .6s;
+    z-index   : 100;
+    visibility: hidden;
+    overflow-x: hidden;
+}
+
+.nav__menu li {
+    padding: 0 1.5rem;
+}
+
+.nav .nav__menu li:first-child {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.nav__botao {
+    display: none;
+}
+
+.nav__icone {
+    cursor     : pointer;
+    display    : inline-block;
+    padding    : 20px 13px;
+    position   : absolute;
+    user-select: none;
+    top  : 20px;
+    right: 8px;
+    border-radius: 1rem;
+}
+
+.nav__icone:hover {
+    background: rgba(80, 129, 251, 0.08);
+}
+
+.nav__-icone {
+    display : block;
+    position: relative;
+
+    height    : 3px;
+    width     : 20px;
+    background: white;
+
+    transition: background .3s ease-out;
+}
+
+.nav__botao:checked~.nav__menu {
+    right     : 1rem;
+    width     : 68vw;
+    visibility: visible;
+    overflow-x: auto;
+}
+
+.nav__-icone::before,
+.nav__-icone::after {
+    background: white;
+
+    content: '';
+
+    display : block;
+    position: absolute;
+    height  : 100%;
+    width   : 100%;
+
+    transition: all .3s ease-out;
+}
+
+.nav__-icone::before {
+    top: 8px;
+}
+
+.nav__-icone::after {
+    top: -8px;
+}
+
+.nav__botao:checked~.nav__icone .nav__-icone {
+    transform: rotate(45deg);
+}
+
+.nav__botao:checked~.nav__icone .nav__-icone::before {
+    transform: rotate(90deg);
+    top      : 0;
+}
+
+.nav__botao:checked~.nav__icone .nav__-icone::after {
+    transform: rotate(90deg);
+    top      : 0;
+}
+
+.nav__menu a {
+    display       : flex;
+    align-items   : center;
+    padding-bottom: 1rem;
+
+    font-family: 'Inter';
+    font-size  : 1rem;
+    color      : white;
+}
+
+.nav__menu h3 {
+    margin-left: 1rem;
+}
+
+.nav__menu .nav__menu_comunidade {
+    padding-bottom: 1.5rem;
+    border-bottom : 1px solid rgba(255, 255, 255, 0.08);
+
+}
+ul.nav__menu li:last-child{
+    display: flex;
+}
+
+.nav__menu .nav__menu_user {
+    display: flex;
+    padding: .75rem;
+    margin-top : 1rem;
+    border-radius: .5rem;
+}
+
+.nav__menu .nav__menu_user h3 {
+    margin-left: .5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .nav__menu {
+        top: 5.375rem;
+    }
+
+    .nav__botao:checked~.nav__menu {
+        width: 45vw;
+
+    }
+
+    .nav__icone {
+        top  : 35px;
+        right: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .nav__icone {
+        display: none;
+    }
+
+    .nav__menu {
+        width   : auto;
+        position: inherit;
+
+        transition: none;
+        visibility: visible;
+        overflow-x: visible;
+        background: none;
+    }
+
+    .nav__menu li {
+        padding: 0 !important;
+    }
+
+    .menu_nome {
+        display       : block;
+        padding       : .5rem 0 1rem 0;
+        font-family   : 'Inter';
+        font-size     : .75rem;
+        color         : white;
+        letter-spacing: 0.4em;
+    }
+
+    .nav__menu_comunidade {
+        border-bottom: none !important;
+    }
+
+    .nav__menu_user {
+        position: absolute;
+        top     : -10px;
+        right   : 50px;
+    }
+
+    .nav__menu .nav__menu_user:hover {
+        background: rgba(255, 255, 255, 0.08);
+    }
+}

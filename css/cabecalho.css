@@ -1,0 +1,122 @@
+.cabecalho {
+    box-sizing: border-box;
+    height: 4.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+/*
+PESQUISA
+*/
+.cabecalho__pesquisar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#check_pesquisa {
+    display: none;
+}
+
+.cabecalho__pesquisa_campo {
+    display: inline-block;
+    position: fixed;
+
+    top: 1rem;
+    height: 48px;
+    right: -20px;
+    width: 0;
+    
+    font-family: 'Inter';
+    font-size: 1rem;
+    color: white;
+
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+    background: #2D415B;
+    z-index: 200;
+    visibility: hidden;
+    overflow-x: hidden;
+    outline: none;
+    transition: .6s;
+}
+
+.check_pesquisa-abrir {
+    margin-right: 45px;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.check_pesquisa-fechar {
+    display: block;
+    position: fixed;
+    right: 21px;
+
+    background: #051D3B;
+    z-index: 200;
+
+    padding: .6rem;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+#check_pesquisa:checked ~ .check_pesquisa-abrir{
+    visibility: hidden;
+}
+
+#check_pesquisa:checked ~ .check_pesquisa-fechar {
+    visibility: visible;
+
+}
+
+#check_pesquisa:checked ~ .cabecalho__pesquisa_campo {
+    right: 3.7rem;
+    width: calc(100% - 75px);
+    visibility: visible;
+}
+/*
+BOTÃO DE MENU E MENU
+*/
+
+
+@media screen and (min-width: 768px){
+    .check_pesquisa-abrir {
+        display: none;
+    }
+
+    .cabecalho__pesquisar {
+        justify-content: center;
+    }
+    
+    .cabecalho__pesquisa_campo {
+        display: flex;
+        position: initial;
+        visibility: visible;
+        width: 80%;
+    }
+
+    .cabecalho__pesquisa_campo:focus, .cabecalho__pesquisa_campo:hover {
+        background-color: #ffffff3d;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .cabecalho {
+        display: grid;
+        grid-template-areas: "logo" "pesquisa" "user";
+        grid-template-columns: 20% 51.5% 25%;
+        grid-template-rows: min-content;
+        gap: 1.5rem;
+    }
+
+    .cabecalho__pesquisa_campo {
+        display: block;
+        margin: 0;
+        align-self: center;
+        width: 100%;
+    }
+
+}

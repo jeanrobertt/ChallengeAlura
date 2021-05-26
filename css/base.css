@@ -1,0 +1,43 @@
+:root {
+    font-size: 16px;
+}
+
+body {
+    background-color: #051D3B;
+    padding: .5rem 1rem 1rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        padding: 1rem 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        display: grid;
+        grid-template-areas: "menu" "codigo" "info";
+        grid-template-columns: 20% 51.5% 25%;
+        grid-template-rows: auto;
+        margin-top: 1rem;
+        gap: 1.5rem;
+    }
+
+    .menu {
+        grid-area: menu;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .codigo {
+        grid-area: codigo;
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .info {
+        grid-area: info;
+        grid-column: 3;
+        grid-row: 1;
+    }
+}
