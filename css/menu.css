@@ -1,35 +1,8 @@
+/*Titulo Menu*/
 .menu_nome {
     display: none;
 }
-
-.nav__menu {
-    display : block;
-    position: absolute;
-    gap     : .5rem;
-
-    top   : 4.375rem;
-    right : 0;
-    width : 0;
-    height: 100vh;
-
-    background   : #2D415B;
-    border-radius: .5rem;
-    list-style   : none;
-
-    transition: .6s;
-    z-index   : 100;
-    visibility: hidden;
-    overflow-x: hidden;
-}
-
-.nav__menu li {
-    padding: 0 1.5rem;
-}
-
-.nav .nav__menu li:first-child {
-    padding: 1.5rem 1.5rem 0 1.5rem;
-}
-
+/*Ícone Menu Hamburguer*/
 .nav__botao {
     display: none;
 }
@@ -39,13 +12,15 @@
     display    : inline-block;
     padding    : 20px 13px;
     position   : absolute;
+    -ms-user-select: none;
+    -webkit-user-select: none;
     user-select: none;
     top  : 20px;
     right: 8px;
     border-radius: 1rem;
 }
 
-.nav__icone:hover {
+.nav__menu li:hover .nav__icone {
     background: rgba(80, 129, 251, 0.08);
 }
 
@@ -62,7 +37,7 @@
 
 .nav__botao:checked~.nav__menu {
     right     : 1rem;
-    width     : 68vw;
+    width     : 75vw;
     visibility: visible;
     overflow-x: auto;
 }
@@ -103,24 +78,77 @@
     top      : 0;
 }
 
+/*Menu*/
+.nav__menu {
+    display : block;
+    position: absolute;
+    gap     : .5rem;
+
+    top   : 4.375rem;
+    right : 0;
+    width : 0;
+    height: 100vh;
+
+    background   : #2D415B;
+    border-radius: .5rem;
+    list-style   : none;
+
+    transition: .6s;
+    z-index   : 100;
+    visibility: hidden;
+    overflow-x: hidden;
+}
+
+.nav__menu li {
+    padding: 0 1.5rem;
+}
+
+.nav .nav__menu li:first-child {
+    padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.menu__icones {
+    display: flex;
+    background: rgba(80, 129, 251, 0.16);
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+}
+
+.ativo .menu__icones {
+    background: #5081FB;
+}
+
+.nav__menu .ativo h3{
+    color: white;
+}
+
 .nav__menu a {
     display       : flex;
     align-items   : center;
     padding-bottom: 1rem;
-
-    font-family: 'Inter';
-    font-size  : 1rem;
-    color      : white;
 }
 
 .nav__menu h3 {
     margin-left: 1rem;
+    font-family: 'Inter';
+    font-size  : 1rem;
+    color      : rgba(255, 255, 255, 0.56);
+}
+
+.nav__menu li:hover .menu__icones {
+    background: rgba(80, 129, 251, 0.64);
+}
+
+.nav__menu li:hover h3 {
+    color      : rgba(255, 255, 255, 0.72);
 }
 
 .nav__menu .nav__menu_comunidade {
     padding-bottom: 1.5rem;
     border-bottom : 1px solid rgba(255, 255, 255, 0.08);
-
 }
 ul.nav__menu li:last-child{
     display: flex;

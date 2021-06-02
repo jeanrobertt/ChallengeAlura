@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/darcula.css">
 		<link rel="stylesheet" href="css/codigo.css">
 		<link rel="stylesheet" href="css/cabecalho.css">
 		<link rel="stylesheet" href="css/menu.css">
@@ -38,7 +39,7 @@
 			</div>
 		</header>
 
-		<main>
+		<main class="main_editor">
 			<section class="menu">
 				<nav class="nav">
 					<input type="checkbox" name="nav__botao" id="nav__botao" class="nav__botao">
@@ -48,14 +49,18 @@
 					<h2 class="menu_nome">MENU</h2>
 					<ul class="nav__menu">
 						<li>
-							<a href="#">
-								<img src="img/editor-de-codigo.png" alt="Icone editor de codigo">
+							<a href="index.html" class="ativo">
+								<span class="menu__icones">
+									<img src="img/editor.svg" alt="Icone editor de codigo">
+								</span>
 								<h3>Editor de Código</h3>
 							</a>
 						</li>
 						<li>
-							<a href="#" class="nav__menu_comunidade">
-								<img src="img/Comunidade.png" alt="Icone comunidade">
+							<a href="comunidade.html">
+								<span class="menu__icones">
+									<img src="img/comunidade.svg" alt="Icone comunidade">
+								</span>
 								<h3>Comunidade</h3>
 							</a>
 						</li>
@@ -69,11 +74,11 @@
 				</nav>
 			</section>
 
-			<section class="codigo codigo-block">
+			<section class="codigo">
 				<div class="codigo__background">
 					<div class="codigo__background-icone">
 						<img src="img/mac_buttons.svg" alt="Botões Mac" class="codigo__background-icone-img">
-						<textarea name="codigo" id="codigo" cols="30" rows="10" spellcheck="false"></textarea>
+						<code spellcheck="false" class="editor hljs javascript" contenteditable="true"></code>
 					</div>
 				</div>
 				<button type="submit" class="codigo__botao">
@@ -84,17 +89,17 @@
 			<section class="info">
 				<div class="info__projeto">
 					<h2 class="info__subtitulo">Seu projeto</h2>
-					<input type="text" name="projeto" id="projeto-name" placeholder="Nome do seu projeto">
+					<input type="text" name="projeto" id="projeto-name" placeholder="Nome do seu projeto" required>
 					<textarea name="projeto" id="projeto-descricao" cols="30" rows="10"
-						placeholder="Descrição do seu projeto"></textarea>
+						placeholder="Descrição do seu projeto" required></textarea>
 				</div>
 				<div class="info__personalizacao">
 					<h2 class="info__subtitulo">Personalização</h2>
 					<div class="container_linguagem">
 						<select name="linguagem" class="linguagem">
-							<option value="Value1">HTML</option>
-							<option value="Value2">CSS</option>
-							<option value="Value3" selected>JavaScript</option>
+							<option value="html">HTML</option>
+							<option value="css">CSS</option>
+							<option value="javascript" selected>JavaScript</option>
 						</select>
 						<input type="color" value="#6BD1FF" name="selecao-cor" id="selecao-cor"
 							class="info__personalizacao-selecao_cor">
@@ -102,8 +107,12 @@
 				</div>
 				<button type="submit" class="info__botao_salvar">Salvar projeto</button>
 			</section>
-			<script src="js/script.js"></script>
+		</main>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+
+		<script src="js/index.js"></script>	
 	</body>
-	</main>
 
 </html>

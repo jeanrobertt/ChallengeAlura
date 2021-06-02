@@ -1,0 +1,23 @@
+{
+  "name": "challenge_front-end",
+  "version": "1.0.0",
+  "description": "Projeto para o Challenge Front-End da Alura",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeanrobertt/ChallengeAlura.git"
+  },
+  "author": "JeanRobert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeanrobertt/ChallengeAlura/issues"
+  },
+  "homepage": "https://github.com/jeanrobertt/ChallengeAlura#readme"
+}

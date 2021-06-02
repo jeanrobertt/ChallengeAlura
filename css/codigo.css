@@ -10,24 +10,33 @@
 }
 
 .codigo__background-icone {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: #141414;
     width: calc(100% - 2rem);
-    height: 22.5rem;
+    height: calc(22.5rem * 100%);
     border-radius: .5rem;
     padding: 1rem;
     box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.24);
 }
 
-#codigo {
-    font-family: 'Roboto Mono', monospace;
-    font-size: .8rem;
-    color: white;
-    width: 100%;
-    height: calc(100% - 2rem);
-    resize: none;
-    background-color: #141414;
+.editor {
+    width: calc(100% - .7rem);
+    height: 250px;
+    border-radius: .5rem;
     border: none;
     outline: none;
+
+    font-family: 'Roboto Mono';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    white-space: pre-wrap;
+}
+
+.editor div {
+    line-height: 18,46px;
 }
 
 .codigo__background-icone-img {
