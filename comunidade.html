@@ -71,178 +71,20 @@
 					</ul>
 				</nav>
 			</section>
-
 			<section class="codigos">
-				<div class="codigos__codigo_e_info p1">
-					<div class="codigo__background" style="background-color: crimson;">
-						<div class="codigo__background-icone">
-							<img src="img/mac_buttons.svg" alt="Botões Mac" class="codigo__background-icone-img">
-							<code class="codigo hljs javascript" spellcheck="false">function teste() {}</code>
-						</div>
-					</div>
-					<div class="info">
-						<div class="info__info">
-							<h2 class="titulo">Titulo do projeto</h2>
-							<p class="descricao">Descrição do projeto</p>
-						</div>
-						<div class="social">
-							<div class="buttons">
-								<div class="comments">
-									<span class="comment btn_comment"></span>
-									<h3>9</h3>
-								</div>
-								<div class="likes">
-									<span class="like btn_like"></span>
-									<h3>9</h3>
-								</div>
-							</div>
-							<div class="autor">
-								<a href="#">
-									<img class="img-user" src="img/foto-user.png" alt="Foto do usuário">
-									<h3>@Harry</h3>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="codigos__codigo_e_info p2">
-					<div class="codigo__background" style="background-color: springgreen;">
-						<div class="codigo__background-icone">
-							<img src="img/mac_buttons.svg" alt="Botões Mac" class="codigo__background-icone-img">
-							<code class="codigo" spellcheck="false">
-								.menu__icones {
-									display: flex;
-									background: rgba(80, 129, 251, 0.16);
-									width: 48px;
-									height: 48px;
-									align-items: center;
-									justify-content: center;
-									border-radius: 16px;
-								}
-							</code>
-						</div>
-					</div>
-					<div class="info">
-						<div class="info__info">
-							<h2 class="titulo">Titulo do projeto</h2>
-							<p class="descricao">Descrição do projeto</p>
-						</div>
-						<div class="social">
-							<div class="buttons">
-								<div class="comments">
-									<span class="comment btn_comment"></span>
-									<h3>9</h3>
-								</div>
-								<div class="likes">
-									<span class="like btn_like"></span>
-									<h3>9</h3>
-								</div>
-							</div>
-							<div class="autor">
-								<a href="#">
-									<img class="img-user" src="img/foto-user.png" alt="Foto do usuário">
-									<h3>@Harry</h3>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="codigos__codigo_e_info p3">
-					<div class="codigo__background" >
-						<div class="codigo__background-icone">
-							<img src="img/mac_buttons.svg" alt="Botões Mac" class="codigo__background-icone-img">
-							<code class="codigo" spellcheck="false">
-								const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
-								const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-
-								const unfold = (f, seed) => {
-								const go = (f, seed, acc) => {
-									const res = f(seed)
-									return res ? go(f, res[1], acc.concat([res[0]])) : acc
-								}
-								return go(f, seed, [])
-								}
-							</code>
-						</div>
-					</div>
-					<div class="info">
-						<div class="info__info">
-							<h2 class="titulo">Titulo do projeto</h2>
-							<p class="descricao">Descrição do projeto</p>
-						</div>
-						<div class="social">
-							<div class="buttons">
-								<div class="comments">
-									<span class="comment btn_comment"></span>
-									<h3>9</h3>
-								</div>
-								<div class="likes">
-									<span class="like btn_like"></span>
-									<h3>9</h3>
-								</div>
-							</div>
-							<div class="autor">
-								<a href="#">
-									<img class="img-user" src="img/foto-user.png" alt="Foto do usuário">
-									<h3>@Harry</h3>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="codigos__codigo_e_info p4">
-					<div class="codigo__background" style="background-color: chocolate;">
-						<div class="codigo__background-icone">
-							<img src="img/mac_buttons.svg" alt="Botões Mac" class="codigo__background-icone-img">
-							<code class="codigo" spellcheck="false">
-								const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
-
-								const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
-
-								const unfold = (f, seed) => {
-								const go = (f, seed, acc) => {
-									const res = f(seed)
-									return res ? go(f, res[1], acc.concat([res[0]])) : acc
-								}
-								return go(f, seed, [])
-								}
-							</code>
-						</div>
-					</div>
-					<div class="info">
-						<div class="info__info">
-							<h2 class="titulo">Titulo do projeto</h2>
-							<p class="descricao">Descrição do projeto</p>
-						</div>
-						<div class="social">
-							<div class="buttons">
-								<div class="comments">
-									<span class="comment btn_comment"></span>
-									<h3>9</h3>
-								</div>
-								<div class="likes">
-									<span class="like btn_like"></span>
-									<h3>9</h3>
-								</div>
-							</div>
-							<div class="autor">
-								<a href="#">
-									<img class="img-user" src="img/foto-user.png" alt="Foto do usuário">
-									<h3>@Harry</h3>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
+				
 			</section>
+
 		</main>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-	
+
 		<script src="js/comunidade.js"></script>
+		<script>
+			const codigos = document.querySelectorAll('.codigo')
+			codigos.forEach(codigo => {
+				hljs.highlightElement(codigo)
+			})
+		</script>
 	</body>
+
 </html>

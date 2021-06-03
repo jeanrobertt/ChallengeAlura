@@ -26,6 +26,14 @@ botaoCor.addEventListener('input', () => {
     background.style.backgroundColor = botaoCor.value
 })
 
+//Adicionando a linguagem que está sendo utilizada na classe do select
+linguagem.addEventListener('change', function () {
+    let optionLinguagem = linguagem.options[linguagem.selectedIndex].value
+
+    $('.linguagem').removeClass();
+    linguagem.classList.add('linguagem', optionLinguagem)
+});
+
 //Ajustando a altura do campo de código.
 /*const editor = document.querySelector('code.editor');
 editor.addEventListener('click', () => {
