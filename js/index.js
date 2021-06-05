@@ -5,7 +5,7 @@ const botao = document.querySelector('.codigo__botao')
 
 function mudaLinguagem() {
     const codigo = areaDoCodigo.querySelector('code').innerText
-    areaDoCodigo.innerHTML = `<img src="img/mac_buttons.svg" alt="Botões Mac" class="codigo__background-icone-img"> <code class="editor hljs ${linguagem.value}" spellcheck="false" contenteditable="true" aria-label="editor"></code>`
+    $('.editor').removeClass().addClass(`editor hljs ${linguagem.value}`)
     areaDoCodigo.querySelector('.editor').innerText = codigo
 }
 
@@ -30,22 +30,33 @@ botaoCor.addEventListener('input', () => {
 linguagem.addEventListener('change', function () {
     let optionLinguagem = linguagem.options[linguagem.selectedIndex].value
 
-    $('.linguagem').removeClass();
-    linguagem.classList.add('linguagem', optionLinguagem)
+    $('.linguagem').removeClass().addClass(`linguagem ${optionLinguagem}`)
 });
 
-//Ajustando a altura do campo de código.
-/*const editor = document.querySelector('code.editor');
-editor.addEventListener('click', () => {
-    editor.style.height = 'auto'
+//Ajustando a altura do campo de código
+$(function(){
+    $('.editor').on('keydown', function(){
+        ajustaAltura()
+    })
 })
 
-editor.addEventListener('blur', () => {
-    if($('.editor').height >= 250){
-        editor.style.height = 'auto'
-        console.log('Maior');
-    } else {
-        editor.style.height = '250px'
-        console.log('Menor');
+function ajustaAltura() {
+    let editor = document.querySelector('.editor')
+    if(editor.firstElementChild == null){
+        return
     }
-})*/
+    if(editor.lastElementChild.tagName == 'DIV'){
+        let lastDiv = $('.editor div:last-child')
+        let posDiv = lastDiv.position()
+        let heightDiv = lastDiv.outerHeight()
+        if(lastDiv.length > 0) {
+            if(posDiv.top + heightDiv >= 250){
+                $('.editor').css('height', 'auto')
+            } else {
+                $('.editor').css('height', '250px')
+            }
+        }
+    } else if(editor.lastChild.tagName == 'SPAN'){
+        $('.editor').css('height', 'auto')
+    }
+}
