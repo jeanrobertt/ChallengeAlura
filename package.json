@@ -4,6 +4,7 @@
   "description": "Projeto para o Challenge Front-End da Alura",
   "main": "index.js",
   "dependencies": {
+    "dom-to-image": "^2.6.0",
     "jquery": "^3.6.0"
   },
   "devDependencies": {},
